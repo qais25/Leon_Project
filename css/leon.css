@@ -1,6 +1,7 @@
 /* Start Variables */
 :root {
     --main-color: #10cab7;
+    --secondary-color: #2c4755;
 }
 
 /* End Variables */
@@ -47,6 +48,35 @@ body {
 }
 
 /* End Glopal Rules */
+
+/* Start Components */
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading+p {
+    margin: -30px 0 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+}
+
+@media (max-width:767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+
+    .special-heading+p {
+        margin: -20px 0 0 0;
+    }
+}
+
+/* End Components */
 
 /* Start Header  */
 
@@ -184,6 +214,7 @@ body {
 .features .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .features .feat {
@@ -207,3 +238,77 @@ body {
 }
 
 /* End Features */
+
+/* Start Services */
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.services .service-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.services .service-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width:767px) {
+    .services .service-content .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .service-content .srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+}
+
+.services .service-content .srv .text {
+    flex: 1;
+}
+
+.services .service-content .srv .text h3 {
+    margin: 0 0 20px;
+}
+
+.services .service-content .srv .text p {
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.services .service-content .image {
+    text-align: center;
+    position: relative;
+}
+
+.services .service-content .image::before {
+    content: '';
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.services .service-content .image img {
+    border: 1px solid var(--secondary-color);
+    width: 260px;
+    height: 400px;
+}
+
+@media (max-width:1199px) {
+    .image-col {
+        display: none;
+    }
+}
+
+/* End Services */
