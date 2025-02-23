@@ -167,7 +167,7 @@ body {
     padding: 15px;
     text-decoration: none;
     color: #333;
-    transition: 0.var(--main-duration);
+    transition: var(--main-duration);
 }
 
 .header .links ul li a:hover {
